@@ -8,23 +8,23 @@ Cloud computing is the practice of using a network of remote servers hosted on t
 
 ### Public Cloud
 
-Public clouds are owned and operated by a third-party cloud service providers, which deliver their computing resources like servers and storage over the Internet. AWS (Amazon Web Services) is an example of a public cloud. With a public cloud, all hardware, software and other supporting infrastructure is owned and managed by the cloud provider. You access these services and manage your account using a web browser. 
+Public clouds are owned and operated by third-party cloud service providers, which deliver their computing resources like servers and storage over the Internet. AWS (Amazon Web Services) is an example of a public cloud. With a public cloud, all hardware, software and other supporting infrastructure is owned and managed by the cloud provider. You access these services and manage your account using a web browser. 
 
-### Private Cloud (on premises)
+### Private Cloud (On Premises)
 
-A private cloud refers to cloud computing resources used exclusively by a single business or organisation. A private cloud can be physically located on the company’s on-site datacenter. Some companies also pay third-party service providers to host their private cloud. A private cloud is one in which the services and infrastructure are maintained on a private network. 
+A private cloud refers to cloud computing resources used exclusively by a single business or organisation. A private cloud can be physically located on the company’s on-site datacenter. Some companies also pay third-party service providers to host their private cloud.
 
-### Hybrid cloud
+### Hybrid Cloud
 
-Hybrid clouds combine public and private clouds, bound together by technology that allows data and applications to be shared between them. By allowing data and applications to move between private and public clouds, a hybrid cloud gives your business greater flexibility, more deployment options and helps optimise your existing infrastructure, security and compliance.
+Hybrid clouds combine public and private clouds. By allowing data and applications to move between private and public clouds, a hybrid cloud gives the business greater flexibility, more deployment options, and helps optimise the business's existing infrastructure, security and compliance.
 
-For example, banks can opt for a hybrid cloud computing architecture. Banks could store data such as a user's personal bank account details on their own premises where they have a great deal of control over the security of sensitive information. But areas of the business that are not sensitive, such as the registration page of the bank's website, could be put onto the cloud. That way, even if someone manages to gain access to the data, they do not gain any confidential information. By therefore adopting for a hybrid architecture, a bank can manage its own security whilst reaping the rewards of cloud computing such as cost effectiveness and scalability.  
+For example, banks can opt for a hybrid cloud computing architecture. Banks could store data such as a user's personal bank account details on their own premises where they have a great deal of control over the security of sensitive information. But areas of the business that are not sensitive, such as the registration page of the bank's website, could be put onto a public cloud. That way, even if someone manages to gain access to the data, they do not get their hands on any confidential information. By therefore adopting a hybrid approach, a bank can manage its own security but still reap the rewards of cloud computing such as cost effectiveness and scalability.  
 
 ## Benefits of Cloud Computing
 
 * Security 
 
-Many cloud providers offer a broad set of policies, technologies and controls that strengthen your security posture overall, helping protect your data, apps and infrastructure from potential threats.
+Many cloud providers offer a broad set of policies, technologies and controls that strengthen a company's security posture overall, helping them protect their data, apps and infrastructure from potential threats.
 
 * Cost 
 
@@ -34,32 +34,14 @@ Cloud computing also offers its users a `pay as you go` approach to pricing. For
 
 * Flexibility through Scalability 
 
-Predicting future traffic is difficult, especially when unforeseen events can arise such as a pandemic. As people were locked inside for months on end, internet usage increased and the traffic websites received increased significantly. But cloud computing is flexible, and it can meet unpredictable events because it offers its users the ability to increase or decrease IT resources as needed to meet changing demand. 
+Predicting future traffic is difficult, especially when unforeseen events can arise such as a pandemic. As people were locked inside for months on end, internet usage increased and the traffic websites received increased significantly. But cloud computing is flexible, and it can meet the challenges posed by unpredictable events because it offers its users the ability to increase or decrease IT resources as needed to meet changing demand. 
 
 * Reliability 
 
-Cloud computing makes data backup, disaster recovery and business continuity easier and less expensive because data can be mirrored at multiple redundant sites on the cloud provider’s network. In AWS, for example, there exist different regions which are physical locations around the world where Amazon cluster data centers. Each group of logical data centers is called an Availability Zone (AZ), and each AWS Region consists of multiple, isolated, and physically separate AZs within a geographic area. That way, even if something disastrous happens to one AZ, such as a natural disaster like flooding, the product will not go done as AWS will automatically redirect the traffic for your instances to another AZ in the region.
+Cloud computing makes data backup, disaster recovery and business continuity easier and less expensive because data can be mirrored at multiple redundant sites on the cloud provider’s network. In AWS, for example, there exist different regions which are physical locations around the world where Amazon clusters data centers. Each group of logical data centers is called an Availability Zone (AZ), and each AWS Region consists of multiple, isolated, and physically separate AZs within a geographic area. That way, even if something disastrous happens to one AZ, such as a natural disaster like flooding, the product will not go down as AWS will automatically redirect the traffic for your instances to another AZ in the region.
 
-Apps can even be deployed into mulitple regions. That way, if the Ireland region for AWS goes down, it can still serve the users from London. However, as you use more regions, the costs will become greater so the business will have to carry out a cost-benefit analysis. 
+Apps can even be deployed in mulitple regions. That way, if the Ireland region for AWS goes down, it can still serve the users by using the London region. However, as you use more regions, the costs will become greater so the business will have to carry out a cost-benefit analysis. 
 
 * Accessibility
 
 Cloud computing ensures details such as a low latency can easily be achieved. For example, if the end user is based in Australia, the region you use could also be in Australia to improve their experience with the product. (SIDE NOTE: CDN - Contact delivery network. Helps latency/response time if the servers from the users are very far away.)
-
-## Set up an EC2 server
-
-> 1. Select location Ireland
-
-> 2. Click EC2.
-
-> 3. Select free tier.
-
-> 4. Pick t2 micro.
-
-> 5. Choose Ubuntu 18.
-
-> 6. Set network to default
-
-> 7. Set subnet to devops 1a.
-
-> 8. Auto assign public ip - enable
