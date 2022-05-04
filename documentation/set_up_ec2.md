@@ -1,4 +1,4 @@
-# How to set up an EC2 server
+# How to set up an EC2 Instance
 
 ## Diagram 
 
