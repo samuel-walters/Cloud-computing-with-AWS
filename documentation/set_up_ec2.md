@@ -60,7 +60,7 @@ The diagram below illustrates the relationship between the local host, AWS, and 
 
 > 25. Run GitBash as an administrator, and navigate to your .ssh folder.
 
-> 26. Type in the command found under `SSH CLIENT` (underneath `Example`) into your GitBash terminal.  
+> 26. Type in the command found under `SSH client` (underneath `Example`) into your GitBash terminal.  
 
 > 27. If a prompt appears, type in `yes`. You now have access to the EC2 Instance.
 
@@ -106,4 +106,4 @@ The diagram below illustrates the relationship between the local host, AWS, and 
 
 > 18. On the `Connect to Instance` page where you copied the `ssh` command, navigate to `EC2 Instance Connect`.
 
-> 19. Type the Public IPv4 address into your browser. Now everything should be working, and you should be able to access the fibonacci page without entering a port number. 
+> 19. Type the Public IPv4 address into your browser. Now everything should be working, and you should be able to access the Fibonacci page without entering a port number. 
