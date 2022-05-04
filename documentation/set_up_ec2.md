@@ -8,6 +8,8 @@ The diagram below illustrates the relationship between the local host, AWS, and 
 
 ## Step by Step Instructions
 
+### Creating and connecting to an EC2 Instance
+
 > 1. In AWS, you must first select the region you are using. In this case, we are selecting Ireland as our location. 
 
 > 2. In the search bar, search `EC2` and click on it.
@@ -60,14 +62,48 @@ The diagram below illustrates the relationship between the local host, AWS, and 
 
 > 26. Type in the command found under `SSH CLIENT` (underneath `Example`) into your GitBash terminal.  
 
-> 27. If a prompt appears, type in `yes`.
+> 27. If a prompt appears, type in `yes`. You now have access to the EC2 Instance.
 
-> 28. Connect to the internet with `sudo apt update -y`. Wait for it to run.
+## Setting up the app
 
-> 29. Then run an upgrade with `sudo apt upgrade -y`. Wait for it to run.
+> 1. [Download WinSCP](https://winscp.net/eng/download.php) and open it.
 
-> 30. Get nginx with `sudo apt install nginx -y`. Wait for it to run.
+> 2. Under `File protocol` choose `SFTP`.
 
-> 31. On the `Connect to Instance` page where you copied the `ssh` command, navigate to `EC2 Instance Connect`.
+> 3. For the `Host name`, copy and paste in the line that appears under `Public IPv4 DNS` in AWS Instances for your EC2 instance. For example, it should look something like this:
 
-> 32. Type the Public IP address into your browser and you should see a `Welcome to nginx!` confirmation page.
+        ec2-54-242-164-104.compute-1.amazonaws.com	
+
+> 4. For `Username`, type in `ubuntu`. 
+
+> 5. Click on `Advanced`. Under `SSH` on the left-hand side, click on `Authentication`. 
+
+> 6. Select your private key file. If this is a .pem file, WinSCP will create a .ppk version in the same directory. The original .pem file will not be altered.
+
+> 7. Click on `OK` and if you want to save the settings, click `Save`.
+
+> 8. Click `Login`. When prompted, click `Yes`.
+
+> 9. Drag and drop the files you want from your local host to the EC2 Instance using WinSCP. In this case, we will add the `App folder` as well as the `provision.sh` script (both of which are found in this GitHub repository). The below image shows the app folder in the local host that needs to be dragged to the EC2 Instance:
+
+![](https://i.imgur.com/UpXKesN.png)
+
+> 10. Once you have added the two files, double check they are there by typing in `ls` inside your EC2 instance. 
+
+> 11. Run the command `chmod +x provision.sh` to make the script executable.
+
+> 12. Run `provision.sh` by using the command `./provision.sh`.
+
+> 13. If you are greeted with the error "-bash: ./provision.sh: /bin/bash^M: bad interpreter: No such file or directory", type in the command `sed -i -e 's/\r$//' provision.sh` and try again.
+
+> 14. Wait for the script to run. 
+
+> 15. Navigate to the app folder by typing `cd app`.
+
+> 16. Install npm using the command `npm install`.
+
+> 17. In the same directory, type in `npm start`.
+
+> 18. On the `Connect to Instance` page where you copied the `ssh` command, navigate to `EC2 Instance Connect`.
+
+> 19. Type the Public IPv4 address into your browser. Now everything should be working, and you should be able to access the fibonacci page without entering a port number. 
