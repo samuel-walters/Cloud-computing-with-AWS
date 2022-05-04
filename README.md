@@ -38,9 +38,9 @@ Predicting future traffic is difficult, especially when unforeseen events can ar
 
 * Reliability 
 
-Cloud computing makes data backup, disaster recovery and business continuity easier and less expensive because data can be mirrored at multiple redundant sites on the cloud provider’s network. In AWS, for example, there exist different regions which are physical locations around the world where Amazon clusters data centers. Each group of logical data centers is called an Availability Zone (AZ), and each AWS Region consists of multiple, isolated, and physically separate AZs within a geographic area. That way, even if something disastrous happens to one AZ, such as a natural disaster like flooding, the product will not go down as AWS will automatically redirect the traffic for your instances to another AZ in the region.
+Cloud computing makes data backup, disaster recovery and business continuity easier and less expensive because data can be mirrored at multiple redundant sites on the cloud provider’s network. In AWS, for example, there exist different regions which are physical locations around the world where Amazon clusters data centers. Each group of logical data centers is called an Availability Zone (AZ), and each AWS Region consists of multiple, isolated, and physically separate AZs within a geographic area. That way, even if something disastrous happens to one AZ, such as a natural disaster, the product will not go down as AWS will automatically redirect the traffic for your instances to another AZ in the region.
 
-Apps can even be deployed in mulitple regions. That way, if the Ireland region for AWS goes down, it can still serve the users by using the London region. However, as you use more regions, the costs will become greater so the business will have to carry out a cost-benefit analysis. 
+Apps can even be deployed in mulitple regions. That way, if the Ireland region for AWS goes down, the company can still serve its users by relying upon another region - such as the London region for example. However, as a company uses more regions, the costs will become greater so the business will have to carry out a cost-benefit analysis. 
 
 * Accessibility
 
