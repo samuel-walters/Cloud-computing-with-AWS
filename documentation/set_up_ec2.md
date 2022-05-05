@@ -4,7 +4,7 @@
 
 The diagram below illustrates the relationship between the local host, AWS, and the two EC2 instances. This diagram can be referred back to when you are setting up a new instance to give a better understanding of what is required.
 
-![](https://i.imgur.com/Ds3vD7s.png)
+![](https://i.imgur.com/1aYRWHR.png)
 
 ## Step by Step Instructions
 
