@@ -2,9 +2,9 @@
 
 ## Diagram 
 
-The diagram below illustrates the relationship between the local host, AWS, and the EC2 Instance. This diagram can be referred back to when you are setting up a new instance to give a better understanding of what is required.
+The diagram below illustrates the relationship between the local host, AWS, and the two EC2 instances. This diagram can be referred back to when you are setting up a new instance to give a better understanding of what is required.
 
-![](https://i.imgur.com/1GzNI3R.png)
+![](https://i.imgur.com/Ds3vD7s.png)
 
 ## Step by Step Instructions
 
@@ -42,6 +42,12 @@ The diagram below illustrates the relationship between the local host, AWS, and 
 
 > 16. For `HTTP`, under `Source`, choose `Anywhere`.
 
+> 17. Click `Add Rule`, and under `Type` choose `Custom TCP`.
+
+> 18. Under `Port range`, put `3000.`.
+
+> 19. Next to `Custom`, type `0.0.0.0/0`.
+
 > 17. Click `Review and Launch`.
 
 > 18. Check your details are correct.
@@ -66,6 +72,10 @@ The diagram below illustrates the relationship between the local host, AWS, and 
 
 ## Setting up the app
 
+There are two methods for adding files to your EC2 Instance. Choose the one that is most convenient.
+
+### WinSCP Method
+
 > 1. [Download WinSCP](https://winscp.net/eng/download.php) and open it.
 
 > 2. Under `File protocol` choose `SFTP`.
@@ -88,22 +98,30 @@ The diagram below illustrates the relationship between the local host, AWS, and 
 
 ![](https://i.imgur.com/UpXKesN.png)
 
-> 10. Once you have added the two files, double check they are there by typing in `ls` inside your EC2 instance. 
+### scp Command Method
 
-> 11. Run the command `chmod +x provision.sh` to make the script executable.
+> 1. Running GitBash as an administrator, use this command to move files/folders: `scp -i location/file.pem -r destination/dir ec2@ip.com:source/file/or/folder`.
 
-> 12. Run `provision.sh` by using the command `./provision.sh`.
+> 2. In this case, the `app` folder and the bash script `provision.sh` will be added to the EC2 instance.
 
-> 13. If you are greeted with the error "-bash: ./provision.sh: /bin/bash^M: bad interpreter: No such file or directory", type in the command `sed -i -e 's/\r$//' provision.sh` and try again.
+## Setting up the Reverse Proxy
 
-> 14. Wait for the script to run. 
+> 1. Once you have added the two files, double check they are there by typing in `ls` inside your EC2 instance. 
 
-> 15. Navigate to the app folder by typing `cd app`.
+> 2. Run the command `chmod +x provision.sh` to make the script executable.
 
-> 16. Install npm using the command `npm install`.
+> 3. Run `provision.sh` by using the command `./provision.sh`.
 
-> 17. In the same directory, type in `npm start`.
+> 4. If you are greeted with the error "-bash: ./provision.sh: /bin/bash^M: bad interpreter: No such file or directory", type in the command `sed -i -e 's/\r$//' provision.sh` and try again.
 
-> 18. On the `Connect to Instance` page where you copied the `ssh` command, navigate to `EC2 Instance Connect`.
+> 5. Wait for the script to run. 
 
-> 19. Type the Public IPv4 address into your browser. Now everything should be working, and you should be able to access the Fibonacci page without entering a port number. 
+> 6. Navigate to the app folder by typing `cd app`.
+
+> 7. Install npm using the command `npm install`.
+
+> 8. In the same directory, type in `npm start`.
+
+> 9. On the `Connect to Instance` page where you copied the `ssh` command, navigate to `EC2 Instance Connect`.
+
+> 10. Type the Public IPv4 address into your browser. Now everything should be working, and you should be able to access the Fibonacci page without entering a port number. 
