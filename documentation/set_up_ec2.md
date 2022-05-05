@@ -100,8 +100,9 @@ There are two methods for adding files to your EC2 Instance. Choose the one that
 
 ### scp Command Method
 
-> 1. Running GitBash as an administrator, use this command to move files/folders: `scp -i location/file.pem -r destination/dir ec2@ip.com:source/file/or/folder`. For example, the command may look like this:
+> 1. Running GitBash as an administrator, use this command to move files/folders: `scp -i location/file.pem -r folder ubuntu@ec2-ip.com:source/folder`. For example, the command may look like this:
         scp -i eng119.pem -r C:/Users/samwa/OneDrive/Desktop/vagrant/eng110_devops/app ubuntu@ec2-3-248-209-246.eu-west-1.compute.amazonaws.com:~/.
+        Note: if you are moving a file, write the same command but without the -r. 
 
 > 2. In this case, the `app` folder and the bash script `provision.sh` will be added to the EC2 instance.
 
