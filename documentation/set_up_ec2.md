@@ -100,7 +100,8 @@ There are two methods for adding files to your EC2 Instance. Choose the one that
 
 ### scp Command Method
 
-> 1. Running GitBash as an administrator, use this command to move files/folders: `scp -i location/file.pem -r destination/dir ec2@ip.com:source/file/or/folder`.
+> 1. Running GitBash as an administrator, use this command to move files/folders: `scp -i location/file.pem -r destination/dir ec2@ip.com:source/file/or/folder`. For example, the command may look like this:
+        scp -i eng119.pem -r C:/Users/samwa/OneDrive/Desktop/vagrant/eng110_devops/app ubuntu@ec2-3-248-209-246.eu-west-1.compute.amazonaws.com:~/.
 
 > 2. In this case, the `app` folder and the bash script `provision.sh` will be added to the EC2 instance.
 
@@ -130,7 +131,8 @@ There are two methods for adding files to your EC2 Instance. Choose the one that
 
 > 1. Connect an EC2 Instance much like the one set up before. Name it `eng110_name_db`.
 
-> 2. For the security group rules, add Type `Custom TCP` and for port put in `27017`. Under `Source`, fill in the ip for your app EC2 instance, and add /32 at the end. For example: `52.51.222.118/32`. Add a description that simply says `app ip`.
+
+> 2. For the security group rules, for SSH, select `My IP`. Then add Type `Custom TCP` and for port put in `27017`. Under `Source`, fill in the ip for your app EC2 instance, and add /32 at the end. For example: `52.51.222.118/32`. Add a description that simply says `app ip`.
 
 > 3. Remember to use the correct key.
 
@@ -160,7 +162,7 @@ There are two methods for adding files to your EC2 Instance. Choose the one that
 
 > 8. In your app EC2 instance, type in `sudo echo "export DB_HOST=mongodb://your_db_ip:27017/posts" >> ~/.bashrc`. 
 
-> 9. Run the command source ~/.bashrc
+> 9. Run the command `source ~/.bashrc`.
 
 > 9. Check the environment variable with the command `printenv DB_HOST`.
 
