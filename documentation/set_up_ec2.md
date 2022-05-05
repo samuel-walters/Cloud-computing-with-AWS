@@ -125,3 +125,46 @@ There are two methods for adding files to your EC2 Instance. Choose the one that
 > 9. On the `Connect to Instance` page where you copied the `ssh` command, navigate to `EC2 Instance Connect`.
 
 > 10. Type the Public IPv4 address into your browser. Now everything should be working, and you should be able to access the Fibonacci page without entering a port number. 
+
+## setting up mongod
+
+> 1. Connect an EC2 Instance much like the one set up before. Name it `eng110_name_db`.
+
+> 2. For the security group rules, add Type `Custom TCP` and for port put in `27017`. Under `Source`, fill in the ip for your app EC2 instance, and add /32 at the end. For example: `52.51.222.118/32`. Add a description that simply says `app ip`.
+
+> 3. Remember to use the correct key.
+
+> 4. Connect to the newly created EC2 instance in the exact same way.
+
+> 5. Type in these commands, one by one:
+
+        sudo apt-get update -y
+        sudo apt-get upgrade -y
+        sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv D68FA50FEA312927
+        echo "deb https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+        sudo apt-get update -y
+        sudo apt-get upgrade -y
+        sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=3.2.20 mongodb-org-tools=3.2.20
+        sudo systemctl status mongod
+        sudo systemctl start mongod
+        sudo systemctl enable mongod
+        sudo systemctl status mongod
+
+> 6. Type in `cd /etc` and then type in `sudo nano mongod.conf`. Under `network interfaces`, for the ip put in `0.0.0.0`. Save and exit.
+
+> 7. Type in these commands:
+
+        sudo systemctl restart mongod
+        sudo systemctl enable mongod
+        sudo systemctl status mongod
+
+> 8. In your app EC2 instance, type in `sudo echo "export DB_HOST=mongodb://your_db_ip:27017/posts" >> ~/.bashrc`. 
+
+> 9. Run the command source ~/.bashrc
+
+> 9. Check the environment variable with the command `printenv DB_HOST`.
+
+> 10. Still in the app EC2 instance, run the command `node seeds/seed.js`. 
+
+> 11. Type in `npm start`. 
+
