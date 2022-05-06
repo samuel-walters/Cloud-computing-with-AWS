@@ -8,7 +8,7 @@ An Amazon Machine Image (AMI) is a supported and maintained image provided by AW
 
 * If you are busy or away on holiday and a colleague needs to set up one of the instances you configured, all you have to do is use an AMI and send them the AMI's id along with some basic instructions such as the name of the security group.  
 
-* You can launch multiple instances from a single AMI very quickly when you require multiple instances with the same configuration details.
+* If you need to set up multiple instances with the same configuration details, you can launch multiple instances from a single AMI very quickly.
 
 ## Benefits of AMIs
 
