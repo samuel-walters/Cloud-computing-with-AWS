@@ -18,7 +18,7 @@ AMIs speed up configuration and deployment because it eliminates manual installa
 
 ### Saves money
 
-AMIs Cut down on costs as instances can be terminated when not in use as AMIs saves the instance's information.
+AMIs Cut down on costs as instances can be terminated when not in use as AMIs save the instance's information.
 
 ### Flexibility
 
