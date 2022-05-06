@@ -2,7 +2,7 @@
 
 ![](https://i.imgur.com/EqpI9zV.png)
 
-> 1. Go to your EC2 Instance, and click `Actions`. Clicck `Images and templates`, and choose `Create image`.
+> 1. Go to your EC2 Instance, and click `Actions`. Click `Images and templates`, and choose `Create image`.
 
 > 2. Name your image an appropriate name (for example eng110_sam_app_from_ami)
 
