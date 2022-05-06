@@ -14,7 +14,7 @@ An Amazon Machine Image (AMI) is a supported and maintained image provided by AW
 
 ### Saves time
 
-AMIs speed up configuration and deployment because it eliminates manual installation and tedious configruation processes.
+AMIs speed up configuration and deployment because it eliminates manual installation and tedious configuration processes.
 
 ### Saves money
 
