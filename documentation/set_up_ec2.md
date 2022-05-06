@@ -1,6 +1,6 @@
 # How to set up an EC2 Instance
 
-## Diagram 
+## Diagram
 
 The diagram below illustrates the relationship between the local host, AWS, and the two EC2 instances. This diagram can be referred back to when you are setting up a new instance to give a better understanding of what is required.
 
