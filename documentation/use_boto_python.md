@@ -18,15 +18,15 @@ Call the make bucket method with the syntax obj.make_bucket("bucket_name_here").
 
 ### Upload a File
 
-Upload a file to S3 with the syntax obj.upload_file("file_name_here"). 
+Upload a file to S3 with the syntax obj.upload_file("bucket_name_here", "file_name_here"). 
 
 ### Download a file
 
-To download a file from S3 to your EC2 instance, use the command obj.retrieve_file("file_name_here").
+To download a file from S3 to your EC2 instance, use the command obj.retrieve_file("bucket_name_here", "file_name_here").
 
 ### Delete a file
 
-To delete a file stored on S3, use the command obj.delete_content("file_name_here").
+To delete a file stored on S3, use the command obj.delete_content("bucket_name_here", "file_name_here").
 
 ### Delete a bucket
 
