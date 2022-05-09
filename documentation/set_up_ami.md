@@ -1,6 +1,12 @@
 # Setting up an AMI
 
+## Diagram
+
+The diagram below illustrates AMIs being created from different EC2 instances. It is then illustrated that these AMIs can be used to create additional instances, with the new instances being based off the instance used to create the AMI.
+
 ![](https://i.imgur.com/EqpI9zV.png)
+
+## Instructions
 
 > 1. Go to your EC2 Instance, and click `Actions`. Click `Images and templates`, and choose `Create image`.
 

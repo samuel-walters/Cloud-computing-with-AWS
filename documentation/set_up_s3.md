@@ -1,5 +1,13 @@
 # Setting up S3
 
+## Diagram
+
+The diagram below illustrates the relationship between the local host, EC2, and S3.
+
+![](https://i.imgur.com/iTxm1a2.png)
+
+## Instructions
+
 > 1. Launch an EC2 instance and connect to it via SSH.
 > 2. Run the commands `sudo apt update -y` and `sudo apt upgrade -y`.
 > 3. Run the command `python --version`. If it is below version 3, run the commands `sudo apt install python` and `sudo apt install python-pip -y`.
