@@ -6,7 +6,7 @@ Within each Region exists a number of separate physical data centers, known as A
 
 All Availability Zones within a single Region are connected to one another through private fiber-optic networking, allowing each Availability Zone to communicate with one another and transfer data quickly and efficiently as required.
 
-Amazon RDS Multi-AZ deployments provide enhanced availability for database instances within a single AWS Region. With Multi-AZ, your data is synchronously replicated to a standby in a different Availability Zone (AZ)
+Amazon Multi-AZ deployments provide enhanced availability for the product/app/database within a single AWS Region. With Multi-AZ, your data is synchronously replicated to a standby in a different Availability Zone (AZ)
 
 ## Server Instance
 
@@ -29,12 +29,6 @@ A listener is a process that checks for connection requests, using the protocol 
 The below diagram shows two different listener groups determining how the load balancer distributes requests to the targets (for example, a target may be an EC2 instance):
 
 ![](https://i.imgur.com/XKPE6Ql.png)
-
-
-
-
-
-
 
 # Launch template for ASG
 
