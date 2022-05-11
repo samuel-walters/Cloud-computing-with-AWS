@@ -1,6 +1,6 @@
 # Diagram
 
-![](https://i.imgur.com/mC4cXt1.png)
+![](https://i.imgur.com/01vPiAs.png)
 
 # Create VPC
 
@@ -80,3 +80,25 @@
 > 2. In networking select your VPC.
 
 > 3. Connect to the launched EC2 instance and check if it works for you and for others.
+
+## Private subnet
+
+> 1. > 1. Click `Create subnet`. 
+
+> 2. Choose the correct VPC ID (the one you set up).
+
+> 3. Choose a Subnet name with appropriate naming conventions (for example eng110-sam-sn).
+
+> 4. For the IPv4 CIDR block, put in `10.0.174.0/24`.
+
+> 5. For routes, put in `0.0.0.0/0` and as a Target put in the app instance's Network interface ID (for example `eni-08158edf754bab170`.
+
+### Launch instance from AMI
+
+> 1. Choose the DB ami.
+
+> 2. For the security group, make sure for source you choose `TCP` and for port range choose `27017`. For the source, choose the CDIR address from your public subnet (for example `10.0.10.0/24`). Also choose 22 with your ip.
+
+> 3. In your app instance, use the `sudo echo "export DB_HOST=mongodb://your_db_ip:27017/posts" >> ~/.bashrc` and replace `your_db_ip` with the Private IPv4 Address of your DB instance. 
+
+> 4. In the app instance, do cd /app and run `npm start`. 
