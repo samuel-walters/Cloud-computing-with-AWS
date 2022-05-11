@@ -68,11 +68,7 @@ Amazon Virtual Private Cloud (Amazon VPC) enables you to launch AWS resources in
 
 ## Example
 
-VPC can have multiple subnets. Postcode - multiple doors. 
-
-Create VPC - Create an address (CDR block) - within the CDR block (postcode) we buy door numbers that would fit inside there. 
-
-Isolated environment: need to have my own space. I'm the only one who has the key (VPC). You need the main door key. Need NACL key to get into the bedrooms. Security groups: locks for the cupboard, chest etc.  
+Isolated environment: need to have my own space. I'm the only one who has the key (VPC) to the main door. After that, people need NACL key to get into the bedrooms. Security groups: locks for the cupboard, chest etc.  
 
 ## Why use a VPC?
 
@@ -142,9 +138,9 @@ Network ACL supports allow and deny rules. By deny rules, you could explicitly d
 
 ### Examples
 
-For example: stadium - all have a pass to get into the stadium - but tickets lead to different areas (players, audience etc.).
+For example: stadium - all have a pass to get into the stadium (NACL) - but tickets lead to different areas (players, audience etc.) (security group).
 
-Another example is the cinema: can only go to the screen you bought the ticket for.
+Another example is the cinema: can only go to the screen you bought the ticket for. Getting in the cinema with the ticket: NACL / specific screen: Security Group.
 
 
 
