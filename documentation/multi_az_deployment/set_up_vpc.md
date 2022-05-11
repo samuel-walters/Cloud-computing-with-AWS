@@ -83,7 +83,7 @@
 
 ## Private subnet
 
-> 1. > 1. Click `Create subnet`. 
+> 1. Click `Create subnet`. 
 
 > 2. Choose the correct VPC ID (the one you set up).
 
