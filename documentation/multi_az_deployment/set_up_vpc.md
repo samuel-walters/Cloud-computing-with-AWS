@@ -91,7 +91,7 @@
 
 > 4. For the IPv4 CIDR block, put in `10.0.174.0/24`.
 
-> 5. For routes, put in `0.0.0.0/0` and as a Target put in the app instance's Network interface ID (for example `eni-08158edf754bab170`.
+> 5. For routes, put in `0.0.0.0/0` and as a Target put in the app instance's Network interface ID (for example `eni-08158edf754bab170`).
 
 ### Launch instance from AMI
 
