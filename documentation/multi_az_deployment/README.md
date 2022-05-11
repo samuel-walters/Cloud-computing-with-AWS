@@ -22,6 +22,12 @@ Elastic Load Balancing automatically distributes your incoming traffic across mu
 
 A load balancer serves as the single point of contact for clients. The load balancer distributes incoming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones. This increases the availability of your application. You add one or more listeners to your load balancer.
 
+### The Two Types of Load Balancer
+
+Classic Load Balancer: this load balancer is likely to be the best choice if your routing and load-balancing needs can all be handled based on IP addresses and TCP ports.
+
+Application Load Balancer: this load balancer can address more complex load-balancing needs by managing traffic at the application level. This is especially advantageous for next-generation infrastructure, such as that based on containers, or if you are building complex web applications in which requests for certain components should be directed to one cluster, while others go to a different one.
+
 ## Listener
 
 A listener is a process that checks for connection requests, using the protocol and port that you configure. The rules that you define for a listener determine how the load balancer routes requests to its registered targets.
@@ -61,3 +67,27 @@ AWS Auto Scaling is a service that automatically monitors and adjusts compute re
 AWS Auto Scaling lets you build scaling plans that automate how groups of different resources respond to changes in demand. You can optimize availability, costs, or a balance of both. AWS Auto Scaling automatically creates all of the scaling policies and sets targets for you based on your preference.
 
 It’s easy to get started with AWS Auto Scaling using the AWS Management Console, Command Line Interface (CLI), or SDK. AWS Auto Scaling is available at no additional charge. You pay only for the AWS resources needed to run your applications and Amazon CloudWatch monitoring fees.
+
+## Four Golden Signals of Monitoring
+
+The four golden signals of monitoring are latency, traffic, errors, and saturation. If you can only measure four metrics of your user-facing system, focus on these four. The time it takes to service a request. It's important to distinguish between the latency of successful requests and the latency of failed requests.
+
+### Latency
+
+The time it takes to service a request. 
+
+### Traffic
+
+A measure of how much demand is being placed on your system, measured in a high-level system-specific metric. For a web service, this measurement is usually HTTP requests per second.
+
+### Errors
+
+The rate of requests that fail, either explicitly (e.g., HTTP 500s), implicitly (for example, an HTTP 200 success response, but coupled with the wrong content), or by policy (for example, "If you committed to one-second response times, any request over one second is an error").
+
+### Saturation
+
+How "full" your service is. A measure of your system fraction, emphasizing the resources that are most constrained (e.g., in a memory-constrained system, show memory; in an I/O-constrained system, show I/O). Note that many systems degrade in performance before they achieve 100% utilisation, so having a utilisation target is essential.
+
+
+
+

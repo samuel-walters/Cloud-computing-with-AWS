@@ -64,13 +64,11 @@ A network access control list (ACL) is an optional layer of security for your VP
 
 ### Difference between security group and NACL?
 
-Security group is the firewall of EC2 Instances.
+* Security group is the firewall of EC2 Instances. Network ACL is the firewall of the VPC Subnets.
 
-Network ACL is the firewall of the VPC Subnets.
+* Network ACLs are applicable at the subnet level, so any instance in the subnet with an associated NACL will follow the rules of the NACL. That’s not the case with security groups - security groups have to be assigned explicitly to the instance. This means any instances within the subnet group gets the rule applied. With Security group, you have to manually assign a security group to the instances.
 
-Network ACLs are applicable at the subnet level, so any instance in the subnet with an associated NACL will follow rules of NACL. That’s not the case with security groups, security groups has to be assigned explicitly to the instance.
-
-This means any instances within the subnet group gets the rule applied. With Security group, you have to manually assign a security group to the instances.
+* Security groups are Stateful. This means any changes applied to an incoming rule will be automatically applied to the outgoing rule. If you allow an incoming port 80, the outgoing port 80 will be automatically opened. However, Network ACLs are stateless. This means any changes applied to an incoming rule will not be applied to the outgoing rule. For example: if you allow an incoming port 80, you would also need to apply the rule for outgoing traffic.
 
 ### Rules: allow and deny
 
