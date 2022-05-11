@@ -116,6 +116,12 @@ The subnet mask determines how many IP addresses can be created from the CIDR bl
 
 A network administrator selects a subnet mask to divide a network into smaller sub-networks.
 
+## What is IP-Networking?
+
+An IP network refers to any group of devices, each with their own unique IP addresses, connected under the same network topology. Devices connected to a shared IP network can send and receive information.
+
+A private IP network allows data to be shared between connected devices securely, by enforcing password protected connectivity that allows only those devices in your office or home to access the IP network.
+
 ## What is NACL?
 
 A network access control list (ACL) is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets. You might set up network ACLs with rules similar to your security groups in order to add an additional layer of security to your VPC. For example, security groups and NACLs both use sets of inbound and outbound rules to control traffic to and from resources in a VPC (but security groups and NACLs operate at separate layers in the VPC, have slightly different default rules, and don't handle response traffic the same way).
@@ -138,9 +144,9 @@ Network ACL supports allow and deny rules. By deny rules, you could explicitly d
 
 ### Examples
 
-For example: stadium - all have a pass to get into the stadium (NACL) - but tickets lead to different areas (players, audience etc.) (security group).
+NACL works as the stadium security that checks tickets. The Security Group works as the second layer check at different sections within the stadium, e.g. media booth, player section, VIP section.
 
-Another example is the cinema: can only go to the screen you bought the ticket for. Getting in the cinema with the ticket: NACL / specific screen: Security Group.
+Another example is the cinema: you can only go to the screen you bought the ticket for. You get in the cinema with the ticket (NACL), but from there you can only go to a specific screen (Security Group).
 
 
 
