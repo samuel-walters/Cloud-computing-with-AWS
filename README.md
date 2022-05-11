@@ -45,3 +45,15 @@ Apps can even be deployed in mulitple regions. That way, if the Ireland region f
 * Accessibility
 
 Cloud computing ensures details such as a low latency can easily be achieved. For example, if the end user is based in Australia, the region you use could also be in Australia to improve their experience with the product. (SIDE NOTE: CDN - Contact delivery network. Helps latency/response time if the servers from the users are very far away.)
+
+# Links
+
+- [AMI information](documentation/AMI.md)
+- [S3 information](documentation/s3.md)
+- [Set up ec2](documentation/set_up_ec2.md)
+- [Set up ami](documentation/set_up_ami.md)
+- [Set up S3](documentation/set_up_s3.md)  
+- [Multi Azs information](documentation/multi_az_deployment/README.md)  
+- [Set up auto scaling](documentation/multi_az_deployment/set_up_auto_scaling_group.md)
+- [VPC information](documentation/multi_az_deployment/vpc.md)
+- [Set up VPC](documentation/multi_az_deployment/set_up_vpc.md)
