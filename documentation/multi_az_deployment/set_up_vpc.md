@@ -1,6 +1,6 @@
 # Diagram
 
-![](https://i.imgur.com/fAm1cFs.png)
+![](https://i.imgur.com/0SGO7W2.png)
 
 # Create VPC
 
