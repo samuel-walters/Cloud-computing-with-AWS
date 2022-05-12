@@ -1,5 +1,7 @@
 # CI — Continuous Integration and CD — Continuous Delivery and Deployment
 
+![](https://www.synopsys.com/content/dam/synopsys/sig-assets/images/cicd.svg.imgo.svg)
+
 CI/CD is a method used to frequently deliver apps to customers by introducing automation into the stages of app development. It is considered as the backbone of DevOps practices and automation.
 
 ## Continuous Integration
@@ -22,5 +24,24 @@ Continuous delivery (CD) is an extension of continuous integration. It makes sur
 
 Continious Deployment goes one step further than continuous delivery. With continuous deployment, every single change that passes all stages of the production pipeline are released straight to the customer. Unlike continuous delivery, there is no human intervention at all, and no button has to be pressed to deploy the application. Only a failed test will prevent a new change being deployed to production.
 
+## Relationship between the CICD practices
 
+* Continuous integration forms a part of both continuous delivery and continuous deployment. 
 
+* In continuous delivery the deployment is done manually and in continuous deployment it happens automatically.
+
+# Tools to build CICD Pipelines
+
+## Jenkins
+
+![](https://miro.medium.com/max/1400/0*_qH98tt7Szpn71w5.png)
+
+Multi Billion Dollar companies like Facebook, Netflix and Ebay have adopted Jenkins because of the advantages it brings.
+
+* Great range of plugins available.
+
+* Easy installation.
+
+* Simple and user-friendly interface
+
+* Community-contributed plugin resources
