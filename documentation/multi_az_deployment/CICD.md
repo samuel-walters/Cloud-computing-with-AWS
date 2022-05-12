@@ -2,7 +2,7 @@
 
 ![](https://www.synopsys.com/content/dam/synopsys/sig-assets/images/cicd.svg.imgo.svg)
 
-CI/CD is a method used to frequently deliver apps to customers by introducing automation into the stages of app development. It is considered as the backbone of DevOps practices and automation.
+CI/CD is a method used to frequently deliver apps to customers by introducing automation into the stages of app development. It is considered the backbone of DevOps practices and automation.
 
 ## Continuous Integration
 
