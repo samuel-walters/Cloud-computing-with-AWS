@@ -44,8 +44,6 @@ Before you can create an Auto Scaling group using a launch template, you must cr
 
 A launch template provides full functionality for Amazon EC2 Auto Scaling and also newer features of Amazon EC2 such as the current generation of Amazon EBS Provisioned IOPS volumes (io2), EBS volume tagging, T2 Unlimited instances, Elastic Inference, and Dedicated Hosts.
 
-Use the following procedure to create a new launch template. After you create your launch template, you can create the Auto Scaling group
-
 # Launch configuration
 
 Launch templates (LTs) are newer than launch configurations (LCs) and provide more options to work with. Thus, the AWS documentation recommends use of launch templates (LTs) over launch configuration (LCs):

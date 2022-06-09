@@ -129,7 +129,7 @@ There are two methods for adding files to your EC2 Instance. Choose the one that
 
 > 10. Type the Public IPv4 address into your browser. Now everything should be working, and you should be able to access the Fibonacci page without entering a port number. 
 
-## setting up mongod
+## setting up mongodb
 
 > 1. Connect an EC2 Instance much like the one set up before. Name it `eng110_name_db`.
 
